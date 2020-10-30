@@ -27,7 +27,7 @@ def timmerSelectSort():
     pylab.show()
 
 
-# timmerSelectSort()
+timmerSelectSort()
 
 
 # ---------------------------
@@ -69,7 +69,7 @@ def timmerSequentialSearch():
             temp.append(random.randint(0, 100))
         k = random.randint(0, 100)
         start = time.time()
-        main.sequentialSearch(temp, k)
+        print(main.sequentialSearch(temp, k))
         end = time.time()
         timer.append((end-start)*1000)  # đơn vị time là 10^3 s
 
@@ -77,4 +77,4 @@ def timmerSequentialSearch():
     pylab.show()
 
 
-timmerSequentialSearch()
+# timmerSequentialSearch()

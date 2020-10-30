@@ -43,7 +43,7 @@ def timmerPrim():
         temp = [[testcase[n][m] for m in range(i)] for n in range(i)]
 
         start = time.time()
-        main.prim(temp)
+        print(main.dijkstra(temp, 0))
         end = time.time()
         timer.append((end-start)*1000)  # đơn vị time là s
 
@@ -51,7 +51,7 @@ def timmerPrim():
     pylab.show()
 
 
-# timmerPrim()
+timmerPrim()
 
 
 # ------------------------------------
