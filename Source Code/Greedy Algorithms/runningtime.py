@@ -51,7 +51,7 @@ def timmerPrim():
     pylab.show()
 
 
-timmerPrim()
+# timmerPrim()
 
 
 # ------------------------------------
@@ -135,7 +135,8 @@ def timmerKruskal():
         end = time.time()
         timer.append((end-start)*1000)  # đơn vị time là s
     pylab.plot(sizeInput, timer, 'o-')
+    pylab.title("Kruskal")
     pylab.show()
 
 
-# timmerKruskal()
+timmerKruskal()

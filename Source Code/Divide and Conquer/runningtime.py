@@ -14,18 +14,19 @@ import pylab
 def timmerMergeSort():
     sizeInput = []
     timer = []
-    for i in range(2, 101):
+    for i in range(2, 2000):
         sizeInput.append(i)
         temp = []
         for j in range(i):
-            temp.append(random.randint(0, 100))
+            temp.append(random.randint(0, 2000))
 
         start = time.time()
-        main.mergeSort(temp)
+        main.mergeSort(temp)  # Call Merge Sort def above
         end = time.time()
-        timer.append((end-start)*1000)  # đơn vị time là 10^3 s
+        timer.append(end-start)
 
     pylab.plot(sizeInput, timer, 'o-')
+    pylab.title("Merge Sort")
     pylab.show()
 
 
@@ -41,22 +42,23 @@ def timmerMergeSort():
 def timmerQuickSort():
     sizeInput = []
     timer = []
-    for i in range(2, 101):
+    for i in range(2, 3000):
         sizeInput.append(i)
         temp = []
         for j in range(i):
-            temp.append(random.randint(0, 100))
+            temp.append(random.randint(0, 2000))
 
         start = time.time()
         main.quickSort(temp, 0, len(temp)-1)
         end = time.time()
-        timer.append((end-start)*1000)  # đơn vị time là 10^3 s
+        timer.append(end-start)
 
     pylab.plot(sizeInput, timer, 'o-')
+    pylab.title("Quick Sort")
     pylab.show()
 
 
-# timmerQuickSort()
+timmerQuickSort()
 
 
 # ---------------------------
@@ -82,4 +84,4 @@ def timmerHeight():
     pylab.show()
 
 
-timmerHeight()
+# timmerHeight()
